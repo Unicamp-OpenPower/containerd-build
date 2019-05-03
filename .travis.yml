@@ -10,7 +10,22 @@ language: go
 go:
   - "1.11.x"
 
-
+addons:
+  apt:
+    packages:
+      - btrfs-tools
+      - libnl-3-dev
+      - libnet-dev
+      - protobuf-c-compiler
+      # - protobuf-compiler
+      - python-minimal
+      - libcap-dev
+      - libaio-dev
+      - libprotobuf-c0-dev
+      - libprotobuf-dev
+      - socat
+      - libseccomp-dev
+      
 before_install:
   - wget -c https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/protoc-3.7.1-linux-ppcle_64.zip
   - sudo unzip protoc-3.7.1-linux-ppcle_64.zip -d /usr/local
