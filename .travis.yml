@@ -40,6 +40,7 @@ before_install:
   - sudo apt-get install -y btrfs-tools
   - cd $GOPATH/src/github.com/
   - mkdir opencontainers
+  - sudo rm -rf containerd
   - mkdir containerd
   - cd opencontainers
   - git clone https://github.com/opencontainers/runc.git
