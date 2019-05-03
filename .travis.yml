@@ -47,8 +47,7 @@ before_install:
   - cd runc
   - make
   - sudo make install
-  - cd ..
-  - cd containerd
+  - cd $GOPATH/src/github.com/containerd
 
 
 script:
