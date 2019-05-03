@@ -35,18 +35,22 @@ env:
   - TRAVIS_GOOS=darwin TRAVIS_CGO_ENABLED=0
 
 before_install:
-  - cd ..
-  - sudo rm -rf containerd
   - wget -c https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/protoc-3.7.1-linux-ppcle_64.zip
   - sudo unzip protoc-3.7.1-linux-ppcle_64.zip -d /usr/local
   - sudo apt-get install -y btrfs-tools
-  - go get github.com/containerd/containerd
-  - go get github.com/opencontainers/runc
-  - cd $GOPATH/src/github.com/opencontainers/runc
+  - cd $GOPATH/src/github.com/
+  - mkdir opencontainers
+  - mkdir containerd
+  - cd opencontainers
+  - git clone https://github.com/opencontainers/runc.git
+  - cd runc
   - sudo make
   - sudo make install
+  - cd ..
+  - cd containerd
 
 
 script:
-  - cd $GOPATH/src/github.com/containerd/containerd
+  - git clone https://github.com/containerd/containerd.git
+  - cd containerd
   - make
