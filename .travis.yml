@@ -34,7 +34,6 @@ before_install:
   - sudo unzip protoc-3.7.1-linux-ppcle_64.zip -d /usr/local
   - sudo apt-get install -y btrfs-tools
   - cd $GOPATH/src/github.com/
-  - mkdir opencontainers
   - sudo rm -rf containerd
   - mkdir containerd
   - cd opencontainers
