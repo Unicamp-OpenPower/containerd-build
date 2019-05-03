@@ -46,8 +46,8 @@ before_install:
   - git clone https://github.com/opencontainers/runc.git
   - cd runc
   - sudo chmod 755 Makefile
-  - make
-  - make install
+  - sudo make
+  - sudo make install
   - cd ..
   - cd containerd
 
