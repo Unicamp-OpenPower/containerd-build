@@ -10,8 +10,8 @@ language: go
 go:
   - "1.11.x"
 
-go_import_path: github.com/containerd/
-go_import_path: github.com/opencontainers/
+go_import_path: $GOPATH/src/github.com/containerd/
+go_import_path: $GOPATH/src/github.com/opencontainers/
 
 addons:
   apt:
@@ -48,6 +48,8 @@ before_install:
 
 
 script:
+  - cd ..
+  - cd ..
   - cd $GOPATH/src/github.com/containerd
   - git clone https://github.com/containerd/containerd.git
   - cd containerd
