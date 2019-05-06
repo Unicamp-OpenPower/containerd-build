@@ -53,7 +53,7 @@ script:
   - ls
   - cd bin
   - sudo chmod 777 containerd
-  - ./containerd
+  - sudo ./containerd
   - ls
 #  - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/kiali kiali-$github_version"
 
