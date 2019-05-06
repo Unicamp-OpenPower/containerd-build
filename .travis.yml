@@ -50,6 +50,8 @@ script:
   - cd containerd
   - ls
   - make
+  - sudo make install
+  - containerd
   - ls
   - cd bin
   - sudo chmod 777 containerd
