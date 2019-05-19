@@ -48,15 +48,11 @@ script:
   - cd containerd
   - git clone https://github.com/containerd/containerd.git
   - cd containerd
-  - ls
-  - make
+  - make VERSION="1.2.6"
   - sudo make install
-  - containerd
-  - ls
   - cd bin
   - sudo chmod 777 containerd
   - sudo ./containerd
-  - ls
-#  - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/kiali kiali-$github_version"
+  - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/containerd containerd"
 
   
