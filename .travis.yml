@@ -52,7 +52,6 @@ script:
   - sudo make install
   - cd bin
   - sudo chmod 777 containerd
-  - sudo ./containerd
   - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/containerd containerd"
 
   
