@@ -1,5 +1,6 @@
-os: linux-ppc64le
-dist: xenial
+os: linux
+arch: ppc64le
+dist: bionic
 sudo: required
 # setup travis so that we can run containers for integration tests
 services:
@@ -8,7 +9,7 @@ services:
 language: go
 
 go:
-  - "1.11.x"
+  - "1.12.x"
 
 go_import_path: github.com/containerd/
 go_import_path: github.com/opencontainers/
@@ -31,7 +32,6 @@ addons:
   
   
 before_install:
-  - sudo apt install -y lftp
   - wget -c https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/protoc-3.7.1-linux-ppcle_64.zip
   - sudo unzip protoc-3.7.1-linux-ppcle_64.zip -d /usr/local
   - sudo apt-get install -y btrfs-tools
@@ -48,10 +48,12 @@ script:
   - cd containerd
   - git clone https://github.com/containerd/containerd.git
   - cd containerd
-  - make VERSION="1.2.6"
+  - git checkout d50db0a42053864a270f648048f9a8b4f24eced3
+  #- make VERSION="1.2.6"
   - sudo make install
+  - ls
   - cd bin
+  - ls
   - sudo chmod 777 containerd
-  - lftp -c "open -u $USER,$PASS ftp://oplab9.parqtec.unicamp.br; put -O /ppc64el/containerd containerd"
 
   
