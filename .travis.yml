@@ -50,6 +50,7 @@ script:
   - cd containerd
   - git checkout d50db0a42053864a270f648048f9a8b4f24eced3
   #- make VERSION="1.2.6"
+  - make
   - sudo make install
   - ls
   - cd bin
