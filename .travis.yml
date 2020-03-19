@@ -56,5 +56,10 @@ script:
   - cd bin
   - ls
   - sudo chmod 777 containerd
+  - ./containerd
+  - ./containerd-shim
+  - ./containerd-shim-runc-v1
+  - ./containerd-stress
+  - ./ctr
 
   
