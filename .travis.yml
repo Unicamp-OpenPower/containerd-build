@@ -11,7 +11,7 @@ language: go
 go:
   - "1.12.x"
 
-go_import_path: github.com/containerd/
+go_import_path: github.com/opencontainers/
 
 addons:
   apt:
