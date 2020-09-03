@@ -36,7 +36,6 @@ script:
   - ls
   - sudo chmod 777 containerd
   - sudo ./containerd --version
-  - sudo ./containerd-shim -v
   - sudo ./containerd-shim-runc-v1 -v
   - sudo ./containerd-stress --version
   - ./ctr --version
