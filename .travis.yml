@@ -35,10 +35,10 @@ script:
   - cd bin
   - ls
   - sudo chmod 777 containerd
-  - sudo ./containerd
-  - sudo ./containerd-shim
-  - sudo ./containerd-shim-runc-v1
-  - sudo ./containerd-stress
-  - ./ctr
+  - sudo ./containerd --version
+  - sudo ./containerd-shim --version
+  - sudo ./containerd-shim-runc-v1 --version
+  - sudo ./containerd-stress --version
+  - ./ctr --version
 
   
