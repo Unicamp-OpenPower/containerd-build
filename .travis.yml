@@ -9,7 +9,7 @@ services:
 language: go
 
 go:
-  - "1.15.x"
+  - "1.17.x"
 
 before_install:
   - sudo apt update
